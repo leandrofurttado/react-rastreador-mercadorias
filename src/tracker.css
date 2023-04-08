@@ -1,0 +1,101 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#090909, #04015f );
+}
+
+.containerInput{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin: 35px;
+    display: flex;
+    border-radius: 35px;
+    box-shadow: 2px 5px 17px rgb(47, 47, 46);
+    /* animation: mexeTitle 4s; */
+}
+
+.containerInput input{
+    background-color: transparent;
+    border: 0;
+    font-size: 30px;
+    color:rgb(12, 13, 13);
+    outline: none;
+    margin-right: 15px;
+}
+
+.title{
+    font-size: 85px;
+    color: white;
+    text-shadow: 2px 5px 17px rgb(47, 47, 46);
+    animation: mexeTitle 4s;
+}
+
+.buttonInput{
+    padding: 10px;
+    display: flex;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+}
+
+.buttonInput:active {
+    /* Define a animação quando o botão é clicado */
+    animation: buttonClickAnimation 0.3s alternate;
+}
+
+.buttonInput:hover {
+    /* Define a animação quando o botão é clicado */
+    transform: scale(1.5)
+}
+
+.exibeDados{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255);
+}
+
+.exibeDados span{
+    padding: 7px;
+    font-size: 16px;
+}
+  
+@keyframes buttonClickAnimation {
+    /* Define a animação que alterna entre o aumento e diminuição de tamanho */
+    0% {
+      transform: scale(1); /* Tamanho original do botão */
+    }
+    50% {
+      transform: scale(1.6); /* Aumenta o tamanho do botão em 20% */
+    }
+    100% {
+      transform: scale(1); /* Retorna ao tamanho original do botão */
+    }
+}
+
+
+@keyframes mexeTitle {
+    from{
+        transform: rotateX(90deg);
+    }
+    to{
+        transform: rotateX(0deg);
+    }
+}
+
+@media (max-width: 1300px) {
+    .title{
+        font-size: 37px
+    }
+    .containerInput input{
+        font-size: 20px;
+    }
+}
